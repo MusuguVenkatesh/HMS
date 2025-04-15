@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+    <menuitem id="hospital_management_menu" action="action_patient" name="Hospital Service"/>
+    </data>
+</odoo>

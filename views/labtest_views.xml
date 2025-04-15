@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_labtest_tree" model="ir.ui.view">
+            <field name="name">hospital.labtest.tree</field>
+            <field name="model">hospital.labtest</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="patient_id"/>
+                    <field name="test_name"/>
+                    <field name="test_date"/>
+                    <field name="result"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_labtest_form" model="ir.ui.view">
+            <field name="name">hospital.labtest.form</field>
+            <field name="model">hospital.labtest</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="patient_id"/>
+                        <field name="test_name"/>
+                        <field name="test_date"/>
+                        <field name="result"/>
+                        <field name="attachment"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_labtest" model="ir.actions.act_window">
+            <field name="name">Lab Tests</field>
+            <field name="res_model">hospital.labtest</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_labtest" name="Lab Tests"
+                  parent="hospital_management_menu" action="action_labtest"/>
+    </data>
+</odoo>

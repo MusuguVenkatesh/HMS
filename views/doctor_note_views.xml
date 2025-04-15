@@ -1,0 +1,44 @@
+<odoo>
+    <record id="view_doctor_note_tree" model="ir.ui.view">
+        <field name="name">hospital.doctor.note.tree</field>
+        <field name="model">hospital.doctor.note</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="patient_id"/>
+                <field name="doctor_id"/>
+                <field name="note_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_doctor_note_form" model="ir.ui.view">
+        <field name="name">hospital.doctor.note.form</field>
+        <field name="model">hospital.doctor.note</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="patient_id"/>
+                        <field name="doctor_id"/>
+                        <field name="note_date"/>
+                        <field name="notes"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_doctor_note" model="ir.actions.act_window">
+        <field name="name">Doctor Notes</field>
+        <field name="res_model">hospital.doctor.note</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <odoo>
+
+  <menuitem id="menu_doctor_note" name="Doctor Notes" parent="hospital_management_menu" action="action_doctor_note"/>
+
+
+</odoo>
+
+</odoo>
