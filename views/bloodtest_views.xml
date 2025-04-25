@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+        <!-- Tree View -->
+        <record id="view_blood_test_tree" model="ir.ui.view">
+            <field name="name">blood.test.list</field>
+            <field name="model">blood.test</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="test_type"/>
+                    <field name="patient_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_blood_test_form" model="ir.ui.view">
+            <field name="name">blood.test.form</field>
+            <field name="model">blood.test</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <sheet>
+                        <group>
+                            <field name="test_type"/>
+                            <field name="patient_id"/>
+                            <field name="patient_name"/>
+                            <field name="patient_age"/>
+                            <field name="patient_gender"/>
+                        </group>
+
+                        <!-- Blood Sugar -->
+                        <group string="Blood Sugar" modifiers='{"invisible": [["test_type", "!=", "sugar"]]}' >
+                        <field name="blood_sugar"/>
+                       </group>
+
+                       <group string="Hemoglobin" modifiers='{"invisible": [["test_type", "!=", "hemoglobin"]]}' >
+                          <field name="hemoglobin"/>
+                        </group>
+
+                       <group string="CBC" modifiers='{"invisible": [["test_type", "!=", "cbc"]]}' >
+                        <field name="wbc_count"/>
+                          <field name="rbc_count"/>
+                        </group>
+
+                        <group string="Thyroid Function Test" modifiers='{"invisible": [["test_type", "!=", "thyroid"]]}' >
+                             <field name="tsh"/>
+                         </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_blood_test" model="ir.actions.act_window">
+            <field name="name">Blood Tests</field>
+            <field name="res_model">blood.test</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+         <menuitem id="labtest_blood_menu" name="Blood Tests"   parent="labtest_menu" action="action_blood_test" />
+
+
+</odoo>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Tree View -->
+        <record id="view_imaging_test_tree" model="ir.ui.view">
+            <field name="name">imaging.test.list</field>
+            <field name="model">imaging.test</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="test_type"/>
+                    <field name="patient_id"/>
+                    <field name="date_taken"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_imaging_test_form" model="ir.ui.view">
+            <field name="name">imaging.test.form</field>
+            <field name="model">imaging.test</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="test_type"/>
+                            <field name="patient_id"/>
+                            <field name="patient_name"/>
+                            <field name="patient_age"/>
+                            <field name="patient_gender"/>
+                        </group>
+
+                        <!-- Image Upload -->
+                        <group string="Upload Image">
+                            <div class="oe_title">
+                                <label for="image" string="Upload Image"/>
+                                <field name="image" widget="image" filename="image_filename" class="oe_avatar"/>
+                                <field name="image_filename" invisible="1"/>
+                            </div>
+                        </group>
+
+                        <!-- Date Taken -->
+                        <group>
+                            <field name="date_taken"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_imaging_test" model="ir.actions.act_window">
+            <field name="name">Imaging Tests</field>
+            <field name="res_model">imaging.test</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item -->
+        <menuitem id="labtest_imaging_menu" name="Imaging Tests" parent="labtest_menu" action="action_imaging_test"/>
+
+    </data>
+</odoo>

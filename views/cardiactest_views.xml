@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Tree View -->
+        <record id="view_cardiac_test_tree" model="ir.ui.view">
+            <field name="name">cardiac.test.list</field>
+            <field name="model">cardiac.test</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="test_type"/>
+                    <field name="patient_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_cardiac_test_form" model="ir.ui.view">
+            <field name="name">cardiac.test.form</field>
+            <field name="model">cardiac.test</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <sheet>
+                        <group>
+                            <field name="test_type"/>
+                            <field name="patient_id"/>
+                            <field name="patient_name"/>
+                            <field name="patient_age"/>
+                            <field name="patient_gender"/>
+                        </group>
+
+                        <!-- ECG -->
+                        <group string="ECG" modifiers='{"invisible": [["test_type", "!=", "ecg"]]}' >
+                            <field name="ecg_result"/>
+                        </group>
+
+                        <!-- Echocardiogram -->
+                        <group string="Echocardiogram" modifiers='{"invisible": [["test_type", "!=", "echo"]]}' >
+                            <field name="echo_result"/>
+                        </group>
+
+                        <!-- Blood Pressure -->
+<group string="Blood Pressure" modifiers='{"invisible": [["test_type", "!=", "bp"]]}' >
+    <group>
+        <field name="systolic_bp"/>
+    </group>
+    <group>
+        <field name="diastolic_bp"/>
+    </group>
+</group>
+
+                        <!-- Troponin -->
+                        <group string="Troponin" modifiers='{"invisible": [["test_type", "!=", "troponin"]]}' >
+                            <field name="troponin_level"/>
+                        </group>
+
+                        <!-- Lipid Profile -->
+                        <group string="Lipid Profile" modifiers='{"invisible": [["test_type", "!=", "lipid"]]}' >
+                            <group>
+                            <field name="total_cholesterol"/>
+                            </group>
+                            <group>
+                            <field name="hdl"/>
+                            </group>
+                            <group>
+                            <field name="ldl"/>
+                            </group>
+                            <group>
+                            <field name="triglycerides"/>
+                        </group>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_cardiac_test" model="ir.actions.act_window">
+            <field name="name">Cardiac Tests</field>
+            <field name="res_model">cardiac.test</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item -->
+        <menuitem id="labtest_cardiac_menu" name="Cardiac Tests" parent="labtest_menu" action="action_cardiac_test"/>
+
+    </data>
+</odoo>
