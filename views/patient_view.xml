@@ -7,8 +7,8 @@
                 <field name="patient_id"/>
                 <field name="name"/>
                 <field name="gender"/>
+                <!--field name="age"/-->
                 <field name="age"/>
-                <field name="age_display"/>
                 <field name="contact_number"/>
                 <field name="blood_group"/>
                 <field name="state_id"/>
@@ -26,8 +26,8 @@
                     <field name="patient_id" readonly="1"/>
                     <field name="name" placeholder="Enter the Name"/>
                     <field name="date_of_birth" placeholder="Enter DOB (YYYY-MM-DD)"/>
+                    <!--field name="age" readonly="1"/-->
                     <field name="age" readonly="1"/>
-                    <field name="age_display" readonly="1"/>
                     <field name="gender"/>
                     <field name="contact_number"/>
                     <field name="blood_group" placeholder="Select Blood group"/>
@@ -44,11 +44,11 @@
                             string="Save"
                             class="btn-primary"
                             style="margin-right: 10px; padding: 10px 20px; font-size: 20px;"/>
-                    <button name="action_reset_form"
+                    <!--button name="action_reset_form"
                             type="object"
                             string="Reset"
                             class="btn-secondary"
-                            style="padding: 10px 20px; font-size: 16px;"/>
+                            style="padding: 10px 20px; font-size: 16px;"/-->
                 </div>
             </sheet>
         </form>
@@ -57,7 +57,7 @@
 
 
     <record id="action_patient" model="ir.actions.act_window">
-        <field name="name">Patients</field>
+        <field name="name">Registration</field>
         <field name="res_model">hospital.patient</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">

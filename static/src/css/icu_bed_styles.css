@@ -1,54 +1,12 @@
-.icu-bed-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  gap: 20px;
-  padding: 20px;
-}
-/* patient/static/src/css/icu_bed_styles.css */
-.test-css-check {
-    border: 5px solid red !important;
-}
-.text-success {
-    --color: RGBA(0, 136, 24, var(--text-opacity, 1));
-    color: var(--color) !important;
+.o_kanban_dashboard .o_kanban_card {
+    width: 250px;
+    margin: 10px;
+    display: inline-block;
+    vertical-align: top;
 }
 
-.text-danger {
-    color: red !important;
-}
-
-
-.icu-bed-box {
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  padding: 10px;
-  text-align: center;
-  transition: transform 0.2s ease;
-  cursor: pointer;
-  background: #fff;
-}
-
-.icu-bed-box:hover {
-  transform: translateY(-5px);
-}
-
-.icu-bed-img {
-  width: 60px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.available {
-  border: 3px solid #28a745;
-}
-
-.booked {
-  border: 3px solid #dc3545;
-  opacity: 0.8;
-}
-
-.bed-label {
-  font-weight: bold;
-  margin-top: 5px;
-  font-size: 14px;
+.o_kanban_dashboard .o_kanban_image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }

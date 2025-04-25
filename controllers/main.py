@@ -1,9 +1,11 @@
 from odoo import http
-# from odoo.http import request
-#
-# class HospitalICUController(http.Controller):
-#
-#     @http.route('/icu_beds', type='http', auth="user", website=True)
-#     def display_icu_beds(self, **kwargs):
-#         beds = request.env['hospital.icu.bed'].get_all_icu_beds()
-#         return request.render('patient.icu_bed_grid_template', {'beds': beds})
+from odoo.http import request
+
+class MedicalReceiptController(http.Controller):
+
+    @http.route(['/medical/receipt/<int:bill_id>'], type='http', auth='user', website=True)
+    def medical_receipt(self, bill_id):
+        bill = request.env['medical.bill'].sudo().browse(bill_id)
+        return request.render('HMS.medical_receipt_template', {
+            'doc': bill
+        })

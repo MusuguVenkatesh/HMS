@@ -28,6 +28,13 @@
                         <field name="respiration_rate"/>
                         <field name="blood_pressure"/>
                     </group>
+                     <div class="oe_button_box" name="buttons" style="margin-top: 20px; text-align: center;">
+                     <button name="action_save_vital"
+                            type="object"
+                            string="Save"
+                            class="btn-primary"
+                            style="margin-right: 10px; padding: 10px 20px; font-size: 20px;"/>
+                    </div>
                 </sheet>
             </form>
         </field>
@@ -39,5 +46,5 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_vital_sign" name="Vital Signs" parent="hospital_management_menu" action="action_vital_sign"/>
+    <menuitem id="menu_vital_sign" name="Vital Signs" parent="reception" action="action_vital_sign"/>
 </odoo>

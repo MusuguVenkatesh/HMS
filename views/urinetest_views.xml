@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Tree View -->
+        <record id="view_urine_test_tree" model="ir.ui.view">
+            <field name="name">urine.test.list</field>
+            <field name="model">urine.test</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="test_type"/>
+                    <field name="patient_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_urine_test_form" model="ir.ui.view">
+            <field name="name">urine.test.form</field>
+            <field name="model">urine.test</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <sheet>
+                        <group>
+                            <field name="test_type"/>
+                            <field name="patient_id"/>
+                            <field name="patient_name"/>
+                            <field name="patient_age"/>
+                            <field name="patient_gender"/>
+                        </group>
+
+                        <!-- Urine Test Details -->
+                        <group string="Urine Test Details" modifiers='{"invisible": [["test_type", "not in", ["routine", "albumin", "glucose", "pregnancy", "ketones", "culture"]]]}'>
+                            <field name="urine_color"/>
+                            <field name="urine_ph"/>
+                        </group>
+
+                        <!-- Specific Urine Test Results -->
+                        <group string="Test Results">
+                            <group string="Glucose">
+                                <field name="glucose"/>
+                            </group>
+                            <group string="Albumin">
+                                <field name="albumin"/>
+                            </group>
+                            <group string="Ketones">
+                                <field name="ketones"/>
+                            </group>
+                            <group string="Leukocytes">
+                                <field name="leukocytes"/>
+                            </group>
+                            <group string="Nitrites">
+                                <field name="nitrites"/>
+                            </group>
+                            <group string="Pregnancy Test">
+                                <field name="pregnancy_test"/>
+                            </group>
+                            <group string="Culture Result">
+                                <field name="culture_result"/>
+                            </group>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_urine_test" model="ir.actions.act_window">
+            <field name="name">Urine Tests</field>
+            <field name="res_model">urine.test</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item -->
+        <menuitem id="labtest_urine_menu" name="Urine Tests" parent="labtest_menu" action="action_urine_test" />
+
+    </data>
+</odoo>

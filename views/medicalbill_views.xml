@@ -1,0 +1,83 @@
+<odoo>
+
+        <record id="view_medical_bill_tree" model="ir.ui.view">
+    <field name="name">medical.bill.tree</field>
+    <field name="model">medical.bill</field>
+    <field name="arch" type="xml">
+        <tree>
+            <field name="patient_id"/>
+            <field name="patient_name"/>
+            <field name="patient_age"/>
+            <field name="patient_gender"/>
+            <field name="total_amount" readonly="1"/>
+        </tree>
+    </field>
+</record>
+
+        <!-- Form View for Medical Bill -->
+        <record id="view_medical_bill_form" model="ir.ui.view">
+            <field name="name">medical.bill.form</field>
+            <field name="model">medical.bill</field>
+            <field name="arch" type="xml">
+                <form>
+                   <header>
+                <button name="print_medical_bill_report"
+                string="Print Bill"
+                type="object"
+                class="btn-primary"/>
+                    </header>
+
+                    <sheet>
+                        <group>
+                            <field name="patient_id"/>
+                            <field name="patient_name"/>
+                            <field name="patient_age"/>
+                            <field name="patient_gender"/>
+                             <field name="date"/>
+                        </group>
+
+                        <group string="Medicines">
+                            <!-- List to input the medicines -->
+                            <field name="line_ids">
+                                <tree>
+                                    <field name="medicine_id"/>
+                                    <field name="cost"/>
+                                    <field name="quantity"/>
+                                    <field name="subtotal" readonly="1"/>
+                                </tree>
+                            </field>
+                        </group>
+
+                        <group>
+                            <field name="total_amount" readonly="1"/>
+                        </group>
+                         <div class="oe_button_box" name="buttons" style="margin-top: 20px; text-align: center;">
+                     <button name="action_save_bill_save"
+                            type="object"
+                            string="Save"
+                            class="btn-primary"
+                            style="margin-right: 10px; padding: 10px 20px; font-size: 20px;"/>
+                    </div>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <!-- Action for Medical Billing -->
+        <record id="action_medical_bill" model="ir.actions.act_window">
+            <field name="name">Medical Billing</field>
+            <field name="res_model">medical.bill</field>
+            <field name="view_mode">tree,form</field>
+
+            <field name="view_id" ref="view_medical_bill_tree"/>
+        </record>
+
+        <!-- Menu Item for Medical Billing -->
+        <!--menuitem id="menu_medical_billing"
+                  name="Medical Billing"
+                  parent="billing_menu"
+                  action="action_medical_bill"/-->
+
+
+</odoo>

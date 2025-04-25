@@ -1,42 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <data>
-        <record id="view_labtest_tree" model="ir.ui.view">
-            <field name="name">hospital.labtest.tree</field>
-            <field name="model">hospital.labtest</field>
+
+        <!-- Tree View -->
+        <record id="view_lab_test_tree" model="ir.ui.view">
+            <field name="name">lab.test.tree</field>
+            <field name="model">lab.test</field>
             <field name="arch" type="xml">
                 <tree>
+                    <field name="test_type"/>
                     <field name="patient_id"/>
-                    <field name="test_name"/>
-                    <field name="test_date"/>
-                    <field name="result"/>
                 </tree>
             </field>
         </record>
 
-        <record id="view_labtest_form" model="ir.ui.view">
-            <field name="name">hospital.labtest.form</field>
-            <field name="model">hospital.labtest</field>
+        <!-- Form View -->
+        <record id="view_lab_test_form" model="ir.ui.view">
+            <field name="name">lab.test.form</field>
+            <field name="model">lab.test</field>
             <field name="arch" type="xml">
                 <form>
-                    <group>
-                        <field name="patient_id"/>
-                        <field name="test_name"/>
-                        <field name="test_date"/>
-                        <field name="result"/>
-                        <field name="attachment"/>
-                    </group>
+
+                    <sheet>
+                        <group>
+
+                            <field name="test_type"/>
+                            <field name="patient_id"/>
+                            <field name="patient_name" readonly="1"/>
+                            <field name="patient_age" readonly="1"/>
+                            <field name="patient_gender" readonly="1"/>
+                            <field name="result"/>
+                        </group>
+
+
+                    </sheet>
                 </form>
             </field>
         </record>
 
+
+        <!-- Action -->
         <record id="action_labtest" model="ir.actions.act_window">
             <field name="name">Lab Tests</field>
-            <field name="res_model">hospital.labtest</field>
+            <field name="res_model">lab.test</field>
             <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p>
+                    Create and manage lab test records.
+                </p>
+            </field>
         </record>
 
-        <menuitem id="menu_labtest" name="Lab Tests"
-                  parent="hospital_management_menu" action="action_labtest"/>
+        <!-- Menu Item -->
+        <menuitem id="labtest_menu" action="action_labtest"
+                  parent="hospital_management_menu" name="Lab Tests"/>
+
+<!--        <menuitem id="labtest_rapid_menu" name="Rapid Diagnostic"   parent="labtest_menu" />-->
+<!--        <menuitem id="labtest_cardiac_menu" name="Cardiac Tests"  parent="labtest_menu" />-->
     </data>
 </odoo>

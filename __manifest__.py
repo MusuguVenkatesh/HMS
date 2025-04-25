@@ -1,57 +1,83 @@
 # -*- coding: utf-8 -*-
 {
     'name': "patient",
-
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
-
+    'summary': "Hospital Management System with ICU Bed Booking",
     'description': """
-Long description of module's purpose
+Full-featured Hospital Management System including:
+- Patient Management
+- Appointments
+- ICU Bed Booking System
+- Medical History, Vital Signs, Medication Plans
     """,
-
     'author': "My Company",
     'website': "https://www.yourcompany.com",
-
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
+    'category': 'Healthcare',
+    'version': '1.0.1',
     'sequence': 5,
-
-    # any module necessary for this one to work correctly
     'depends': ['base'],
 
-    # always loaded
     'data': [
-    'security/ir.model.access.csv',
-    'views/patient_view.xml',
-    'views/menu_views.xml',
-    'views/appointment_views.xml',
-    'views/labtest_views.xml',
-    'views/prescription_views.xml',
-    'views/doctor_note_views.xml',
-    'views/billing_views.xml',
-    'views/medical_history_views.xml',
-    'views/vital_sign_views.xml',
-    'views/medication_plan_views.xml',
-    'views/icu_bed_views.xml',
-],
+       # 'security/security.xml',
+        'security/ir.model.access.csv',
 
-    'demo': [
+        'views/patient_view.xml',
+        'views/menu_views.xml',
+        'views/appointment_views.xml',
+        'views/doctor_note_views.xml',
+        'views/medical_history_views.xml',
+        'views/vital_sign_views.xml',
 
+        'views/hospital_medication_plan_line_views.xml',
+        'views/labtest_views.xml',
+        'views/bloodtest_views.xml',
+        'views/urinetest_views.xml',
+        'views/cardiactest_views.xml',
+        'views/rapiddiagnostic_views.xml',
+        'views/imagingtest_views.xml',
+
+    #     'views/medicalbillreport_views.xml',
+    #     'views/medicalbill_views.xml',
+    # # QWeb template
+
+        # Views
+       # 'views/medicalbillreport_views.xml',
+        'views/medicalbill_views.xml',
+        'report/report_medical_bill.xml',
+
+
+        # ICU Bed Booking System Views
+        'views/icu_bed_views.xml',
+        'views/icu_booking_views.xml',
+
+        # ICU Bed Data
+        'data/icu_bed_data.xml',
+       # 'data/icu_bed_cron.xml',
     ],
-'assets': {
-    'web.assets_backend': [
-        'patient/static/src/css/custom.css',
-        'patient/static/src/img/bed.png',
 
+    'assets': {
+        'web.assets_backend.css': [
+            # HMS Custom Assets
+            'patient/static/src/css/custom.css',
+           'patient/static/src/img/bed.png',
+          'patient/static/src/css/appointment_colors.css',
+          # 'patient/static/src/js/reset_form.js',
+         'patient/static/src/css/custom_buttons.css',
 
-    ],
-},
+            # ICU Bed Layout Assets
+            'patient/static/src/css/icu_bed.css',
 
+             'patient/static/src/css/bed.css',
+          #  'HMS/static/src/img/bed.png',
+          'patient/static/description/bed1.png'
+            # Optional future widget
+            # 'patient/static/src/js/icu_bed_widget.js',
+        ],
+    },
+            'web.assets_frontend': [
+            'patient/static/src/js/reset_form.js',
+        ],
 
-    "installable":True,
-    "application":True,
-    "License":"LGPl-3"
+    'installable': True,
+    'application': True,
+    'license': 'LGPL-3',
 }
-

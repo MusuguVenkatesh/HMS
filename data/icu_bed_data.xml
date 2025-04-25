@@ -1,0 +1,296 @@
+
+
+ <odoo noupdate="1">
+    <record id="icu_bed_1" model="hospital.icu.bed">
+        <field name="name">ICU Bed A1</field>
+        <field name="code">A1</field>
+    </record>
+    <record id="icu_bed_2" model="hospital.icu.bed">
+        <field name="name">ICU Bed A2</field>
+        <field name="code">A2</field>
+    </record>
+    <record id="icu_bed_3" model="hospital.icu.bed">
+        <field name="name">ICU Bed A3</field>
+        <field name="code">A3</field>
+    </record>
+    <record id="icu_bed_4" model="hospital.icu.bed">
+        <field name="name">ICU Bed A4</field>
+        <field name="code">A4</field>
+    </record>
+    <record id="icu_bed_5" model="hospital.icu.bed">
+        <field name="name">ICU Bed A5</field>
+        <field name="code">A5</field>
+    </record>
+    <record id="icu_bed_6" model="hospital.icu.bed">
+        <field name="name">ICU Bed A6</field>
+        <field name="code">A6</field>
+    </record>
+    <record id="icu_bed_7" model="hospital.icu.bed">
+        <field name="name">ICU Bed A7</field>
+        <field name="code">A7</field>
+    </record>
+    <record id="icu_bed_8" model="hospital.icu.bed">
+        <field name="name">ICU Bed A8</field>
+        <field name="code">A8</field>
+    </record>
+    <record id="icu_bed_9" model="hospital.icu.bed">
+        <field name="name">ICU Bed A9</field>
+        <field name="code">A9</field>
+    </record>
+    <record id="icu_bed_10" model="hospital.icu.bed">
+        <field name="name">ICU Bed A10</field>
+        <field name="code">A10</field>
+    </record>
+</odoo>
+
+
+  <!--record id="icu_bed_01" model="hospital.icu.bed">
+    <field name="name">ICU Bed A1</field>
+    <field name="code">BED-A1</field>
+  </record>
+
+  <record id="icu_bed_02" model="hospital.icu.bed">
+    <field name="name">ICU Bed A2</field>
+    <field name="code">BED-A2</field>
+  </record>
+
+  <record id="icu_bed_03" model="hospital.icu.bed">
+    <field name="name">ICU Bed A3</field>
+    <field name="code">BED-A3</field>
+  </record>
+
+  <record id="icu_bed_04" model="hospital.icu.bed">
+    <field name="name">ICU Bed A4</field>
+    <field name="code">BED-A4</field>
+  </record>
+
+  <record id="icu_bed_05" model="hospital.icu.bed">
+    <field name="name">ICU Bed A5</field>
+    <field name="code">BED-A5</field>
+  </record>
+
+  <record id="icu_bed_06" model="hospital.icu.bed">
+    <field name="name">ICU Bed A6</field>
+    <field name="code">BED-A6</field>
+  </record>
+
+  <record id="icu_bed_07" model="hospital.icu.bed">
+    <field name="name">ICU Bed A7</field>
+    <field name="code">BED-A7</field>
+  </record>
+
+  <record id="icu_bed_08" model="hospital.icu.bed">
+    <field name="name">ICU Bed A8</field>
+    <field name="code">BED-A8</field>
+  </record>
+
+  <record id="icu_bed_09" model="hospital.icu.bed">
+    <field name="name">ICU Bed A9</field>
+    <field name="code">BED-A9</field>
+  </record>
+
+  <record id="icu_bed_10" model="hospital.icu.bed">
+    <field name="name">ICU Bed A10</field>
+    <field name="code">BED-A10</field>
+  </record>
+
+  <record id="icu_bed_11" model="hospital.icu.bed">
+    <field name="name">ICU Bed A11</field>
+    <field name="code">BED-A11</field>
+  </record>
+
+  <record id="icu_bed_12" model="hospital.icu.bed">
+    <field name="name">ICU Bed A12</field>
+    <field name="code">BED-A12</field>
+  </record>
+
+  <record id="icu_bed_13" model="hospital.icu.bed">
+    <field name="name">ICU Bed A13</field>
+    <field name="code">BED-A13</field>
+  </record>
+
+  <record id="icu_bed_14" model="hospital.icu.bed">
+    <field name="name">ICU Bed A14</field>
+    <field name="code">BED-A14</field>
+  </record>
+
+  <record id="icu_bed_15" model="hospital.icu.bed">
+    <field name="name">ICU Bed A15</field>
+    <field name="code">BED-A15</field>
+  </record>
+
+  <record id="icu_bed_16" model="hospital.icu.bed">
+    <field name="name">ICU Bed A16</field>
+    <field name="code">BED-A16</field>
+  </record>
+
+  <record id="icu_bed_17" model="hospital.icu.bed">
+    <field name="name">ICU Bed A17</field>
+    <field name="code">BED-A17</field>
+  </record>
+
+  <record id="icu_bed_18" model="hospital.icu.bed">
+    <field name="name">ICU Bed A18</field>
+    <field name="code">BED-A18</field>
+  </record>
+
+  <record id="icu_bed_19" model="hospital.icu.bed">
+    <field name="name">ICU Bed A19</field>
+    <field name="code">BED-A19</field>
+  </record>
+
+  <record id="icu_bed_20" model="hospital.icu.bed">
+    <field name="name">ICU Bed A20</field>
+    <field name="code">BED-A20</field>
+  </record>
+
+  <record id="icu_bed_21" model="hospital.icu.bed">
+    <field name="name">ICU Bed A21</field>
+    <field name="code">BED-A21</field>
+  </record>
+
+  <record id="icu_bed_22" model="hospital.icu.bed">
+    <field name="name">ICU Bed A22</field>
+    <field name="code">BED-A22</field>
+  </record>
+
+  <record id="icu_bed_23" model="hospital.icu.bed">
+    <field name="name">ICU Bed A23</field>
+    <field name="code">BED-A23</field>
+  </record>
+
+  <record id="icu_bed_24" model="hospital.icu.bed">
+    <field name="name">ICU Bed A24</field>
+    <field name="code">BED-A24</field>
+  </record>
+
+  <record id="icu_bed_25" model="hospital.icu.bed">
+    <field name="name">ICU Bed A25</field>
+    <field name="code">BED-A25</field>
+  </record>
+
+  <record id="icu_bed_26" model="hospital.icu.bed">
+    <field name="name">ICU Bed A26</field>
+    <field name="code">BED-A26</field>
+  </record>
+
+  <record id="icu_bed_27" model="hospital.icu.bed">
+    <field name="name">ICU Bed A27</field>
+    <field name="code">BED-A27</field>
+  </record>
+
+  <record id="icu_bed_28" model="hospital.icu.bed">
+    <field name="name">ICU Bed A28</field>
+    <field name="code">BED-A28</field>
+  </record>
+
+  <record id="icu_bed_29" model="hospital.icu.bed">
+    <field name="name">ICU Bed A29</field>
+    <field name="code">BED-A29</field>
+  </record>
+
+  <record id="icu_bed_30" model="hospital.icu.bed">
+    <field name="name">ICU Bed A30</field>
+    <field name="code">BED-A30</field>
+  </record>
+
+  <record id="icu_bed_31" model="hospital.icu.bed">
+    <field name="name">ICU Bed A31</field>
+    <field name="code">BED-A31</field>
+  </record>
+
+  <record id="icu_bed_32" model="hospital.icu.bed">
+    <field name="name">ICU Bed A32</field>
+    <field name="code">BED-A32</field>
+  </record>
+
+  <record id="icu_bed_33" model="hospital.icu.bed">
+    <field name="name">ICU Bed A33</field>
+    <field name="code">BED-A33</field>
+  </record>
+
+  <record id="icu_bed_34" model="hospital.icu.bed">
+    <field name="name">ICU Bed A34</field>
+    <field name="code">BED-A34</field>
+  </record>
+
+  <record id="icu_bed_35" model="hospital.icu.bed">
+    <field name="name">ICU Bed A35</field>
+    <field name="code">BED-A35</field>
+  </record>
+
+  <record id="icu_bed_36" model="hospital.icu.bed">
+    <field name="name">ICU Bed A36</field>
+    <field name="code">BED-A36</field>
+  </record>
+
+  <record id="icu_bed_37" model="hospital.icu.bed">
+    <field name="name">ICU Bed A37</field>
+    <field name="code">BED-A37</field>
+  </record>
+
+  <record id="icu_bed_38" model="hospital.icu.bed">
+    <field name="name">ICU Bed A38</field>
+    <field name="code">BED-A38</field>
+  </record>
+
+  <record id="icu_bed_39" model="hospital.icu.bed">
+    <field name="name">ICU Bed A39</field>
+    <field name="code">BED-A39</field>
+  </record>
+
+  <record id="icu_bed_40" model="hospital.icu.bed">
+    <field name="name">ICU Bed A40</field>
+    <field name="code">BED-A40</field>
+  </record>
+
+  <record id="icu_bed_41" model="hospital.icu.bed">
+    <field name="name">ICU Bed A41</field>
+    <field name="code">BED-A41</field>
+  </record>
+
+  <record id="icu_bed_42" model="hospital.icu.bed">
+    <field name="name">ICU Bed A42</field>
+    <field name="code">BED-A42</field>
+  </record>
+
+  <record id="icu_bed_43" model="hospital.icu.bed">
+    <field name="name">ICU Bed A43</field>
+    <field name="code">BED-A43</field>
+  </record>
+
+  <record id="icu_bed_44" model="hospital.icu.bed">
+    <field name="name">ICU Bed A44</field>
+    <field name="code">BED-A44</field>
+  </record>
+
+  <record id="icu_bed_45" model="hospital.icu.bed">
+    <field name="name">ICU Bed A45</field>
+    <field name="code">BED-A45</field>
+  </record>
+
+  <record id="icu_bed_46" model="hospital.icu.bed">
+    <field name="name">ICU Bed A46</field>
+    <field name="code">BED-A46</field>
+  </record>
+
+  <record id="icu_bed_47" model="hospital.icu.bed">
+    <field name="name">ICU Bed A47</field>
+    <field name="code">BED-A47</field>
+  </record>
+
+  <record id="icu_bed_48" model="hospital.icu.bed">
+    <field name="name">ICU Bed A48</field>
+    <field name="code">BED-A48</field>
+  </record>
+
+  <record id="icu_bed_49" model="hospital.icu.bed">
+    <field name="name">ICU Bed A49</field>
+    <field name="code">BED-A49</field>
+  </record>
+
+  <record id="icu_bed_50" model="hospital.icu.bed">
+    <field name="name">ICU Bed A50</field>
+    <field name="code">BED-A50</field>
+  </record-->
+

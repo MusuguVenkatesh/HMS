@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <!-- Tree View -->
+        <record id="view_rapid_test_tree" model="ir.ui.view">
+            <field name="name">rapid.test.list</field>
+            <field name="model">rapid.diagnostic.test</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="test_type"/>
+                    <field name="patient_id"/>
+                    <field name="test_result"/>
+                    <field name="test_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_rapid_test_form" model="ir.ui.view">
+            <field name="name">rapid.test.form</field>
+            <field name="model">rapid.diagnostic.test</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="test_type"/>
+                            <field name="test_date"/>
+                        </group>
+
+                        <group>
+                            <field name="patient_id"/>
+                            <field name="patient_name"/>
+                            <field name="patient_age"/>
+                            <field name="patient_gender"/>
+                        </group>
+
+                        <group string="Test Details">
+                            <field name="test_result"/>
+                            <field name="remarks"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_rapid_test" model="ir.actions.act_window">
+            <field name="name">Rapid Diagnostic Tests</field>
+            <field name="res_model">rapid.diagnostic.test</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menu Item -->
+        <menuitem id="labtest_rapid_menu" name="Rapid Tests" parent="labtest_menu" action="action_rapid_test"/>
+
+    </data>
+</odoo>

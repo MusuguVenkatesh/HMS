@@ -1,16 +1,26 @@
-from odoo import fields, models
+
+from odoo import models, fields
 
 class LabTest(models.Model):
-    _name = 'hospital.labtest'
+    _name = 'lab.test'
     _description = 'Lab Test'
 
-    patient_id = fields.Many2one('hospital.patient', string="Patient", required=True)
-    test_name = fields.Char(string="Test Name")
-    test_date = fields.Date(string="Test Date", default=fields.Date.today)
-    result = fields.Text(string="Test Result")
-    attachment = fields.Binary(string="Attach Report")
-    price = fields.Float(string="Price")
-    billing_id = fields.Many2one('hospital.billing', string='Billing')
+    test_type = test_type = fields.Selection([
+    ('blood', 'Blood Test'),
+    ('sugar', 'Sugar Test'),
+    ('xray', 'X-Ray'),
+    ('scan', 'Scanning')
+], string='Test Type', required=True)
+
+    result = fields.Text(string='Result')
+
+    patient_id = fields.Many2one('hospital.patient', string='Patient', required=True)
+
+    # These fields are automatically fetched from the selected patient
+    patient_name = fields.Char(string='Patient Name', related='patient_id.name', readonly=True)
+    patient_age = fields.Char(string='Patient Age', related='patient_id.age', readonly=True)
+    patient_gender = fields.Selection(related='patient_id.gender', readonly=True)
+
 
 
 

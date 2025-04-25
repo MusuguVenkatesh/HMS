@@ -8,3 +8,5 @@ class HospitalMedicalHistory(models.Model):
     condition = fields.Char(string="Condition")
     diagnosis_date = fields.Date(string="Diagnosed On")
     notes = fields.Text(string="Details")
+
+

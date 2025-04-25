@@ -2,5 +2,9 @@
 <odoo>
     <data>
     <menuitem id="hospital_management_menu" action="action_patient" name="Hospital Service"/>
+        <menuitem id="reception" action="action_patient" name="Reception"/>
+        <menuitem id="doctor_menu" action="action_patient" name="Doctor Log"/>
+         <menuitem id="icu_menu" action="action_patient" name="ICU Management"/>
+         <menuitem id="billing_menu" action="action_medical_bill" name="Hospital Billing"/>
     </data>
 </odoo>

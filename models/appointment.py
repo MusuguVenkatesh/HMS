@@ -13,9 +13,8 @@ class Appointment(models.Model):
         ('draft', 'Draft'),
         ('confirmed', 'Confirmed'),
         ('done', 'Done'),
-        ('pending', 'Pending'),
-
-    ], default='draft')
+        ('cancelled', 'Cancelled'),
+    ], string="Status", default='draft')
 
     def action_confirm(self):
         self.state = 'confirmed'
@@ -25,6 +24,24 @@ class Appointment(models.Model):
 
     def action_cancel(self):
         self.state = 'cancelled'
+
+    def action_save_appointment(self):
+            # In Odoo, record is auto-saved on changes.
+            # This is just for demonstration.
+            return {
+                'type': 'ir.actions.client',
+                'tag': 'display_notification',
+                'params': {
+                    'title': 'Saved',
+                    'message': 'Appointment record saved successfully!',
+                    'type': 'success',
+                    'sticky': False,
+                }
+            }
+
+
+
+
 
 appointment_type = fields.Selection([
     ('checkup', 'General Checkup'),
@@ -37,5 +54,7 @@ duration = fields.Float(string="Duration (hrs)")
 notes = fields.Html(string="Doctor's Notes")
 
 is_first_visit = fields.Boolean(string="First Visit")
+
+
 
 
