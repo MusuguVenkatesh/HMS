@@ -1,0 +1,18 @@
+patient/
+├── models/
+│   ├── __init__.py
+│   ├── icu_bed.py            # ICU Bed model
+│   └── icu_booking.py        # ICU Booking model
+├── views/
+│   ├── icu_bed_kanban.xml    # Kanban view for ICU Bed grid
+│   ├── icu_booking_form.xml  # Form view for ICU Booking wizard
+│   └── icu_booking_wizard.xml # Wizard for booking an ICU Bed
+├── static/
+│   ├── description/
+│   │   └── default_icu_bed_image.png  # Default ICU Bed image
+│   └── src/
+│       └── js/
+│           └── icu_booking.js # JS file for interactive elements (optional)
+├── security/
+│   └── ir.model.access.csv  # Access control for ICU Booking and ICU Bed
+└── __manifest__.py           # Manifest file for module installation
