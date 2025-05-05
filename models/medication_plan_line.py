@@ -10,7 +10,7 @@ class MedicationPlanLine(models.Model):
 
     medicine_name = fields.Char(string='Medicine', required=True)
     patient_id = fields.Many2one('hospital.patient', string="Patient", required=True)
-
+    bed_patient_name = fields.Char(string='Bed Patient Name')
     duration = fields.Integer(string='Duration (days)')
     dosage = fields.Char(string="Dosage")
     frequency_morning = fields.Boolean(string='Morning')

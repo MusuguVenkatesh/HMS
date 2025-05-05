@@ -48,5 +48,5 @@
   </record>
 
   <!-- ICU Booking Menu -->
-  <menuitem id="menu_icu_booking" name="ICU Bookings" parent="icu_menu" action="action_icu_bookings"/>
+  <!--menuitem id="menu_icu_booking" name="ICU Bookings" parent="icu_menu" action="action_icu_bookings"/-->
 </odoo>

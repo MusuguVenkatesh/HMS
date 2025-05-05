@@ -43,7 +43,7 @@
 
     <odoo>
 
-  <menuitem id="menu_doctor_note" name="Doctor Notes" parent="doctor_menu" action="action_doctor_note"/>
+  <!--menuitem id="menu_doctor_note" name="Doctor Notes" parent="doctor_menu" action="action_doctor_note"/-->
 
 
 </odoo>

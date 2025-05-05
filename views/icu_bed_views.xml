@@ -106,5 +106,5 @@
     </record>
 
     <!-- Menu -->
-     <menuitem id="icu_menu" action="action_icu_beds" name="ICU Management"/>>
+     <!--menuitem id="icu_menu" action="action_icu_beds" name="ICU Management"/-->
 </odoo>

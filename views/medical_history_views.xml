@@ -1,6 +1,49 @@
 <odoo>
+    <record id="view_medical_history_form" model="ir.ui.view">
+        <field name="name">hospital.medical.history.form</field>
+        <field name="model">hospital.medical.history</field>
+        <field name="arch" type="xml">
+            <form string="Medical History">
+                <sheet>
+                    <group>
+                        <field name="patient_id"/>
+                        <field name="patient_name" readonly="1"/>
+                        <field name="patient_age" readonly="1"/>
+                        <field name="condition"/>
+                        <field name="test_type"/>
+                        <field name="diagnosis_date"/>
+                        <field name="notes"/>
+                    </group>
+                    <notebook>
+                        <page string="Prescribed Medicines">
+                            <field name="medicine_line_ids">
+                                <tree editable="bottom">
+                                    <field name="medicine_name" placeholder="Start typing..."/>
+                                    <field name="dosage"/>
+                                    <field name="morning_before"/>
+                                    <field name="morning_after"/>
+                                    <field name="afternoon_before"/>
+                                    <field name="afternoon_after"/>
+                                    <field name="night_before"/>
+                                    <field name="night_after"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                    <div class="oe_button_box" name="buttons" style="margin-top: 20px; text-align: center;">
+                     <button name="action_save_patient"
+                            type="object"
+                            string="Save"
+                            class="btn-primary"
+                            style="margin-right: 10px; padding: 10px 20px; font-size: 20px;"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
     <record id="view_medical_history_tree" model="ir.ui.view">
-        <field name="name">hospital.medical.history.tree</field>
+        <field name="name">hospital.medical.history.list</field>
         <field name="model">hospital.medical.history</field>
         <field name="arch" type="xml">
             <tree>
@@ -11,28 +54,11 @@
         </field>
     </record>
 
-    <record id="view_medical_history_form" model="ir.ui.view">
-        <field name="name">hospital.medical.history.form</field>
-        <field name="model">hospital.medical.history</field>
-        <field name="arch" type="xml">
-            <form>
-                <sheet>
-                    <group>
-                        <field name="patient_id"/>
-                        <field name="condition"/>
-                        <field name="diagnosis_date"/>
-                        <field name="notes"/>
-                    </group>
-                </sheet>
-            </form>
-        </field>
-    </record>
-
     <record id="action_medical_history" model="ir.actions.act_window">
-        <field name="name">Medical History</field>
+        <field name="name">Medical Histories</field>
         <field name="res_model">hospital.medical.history</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_medical_history" name="Medical History" parent="hospital_management_menu" action="action_medical_history"/>
+
 </odoo>

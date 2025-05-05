@@ -13,6 +13,7 @@ class Patient(models.Model):
     patient_id = fields.Char(string="Patient ID", required=True, copy=False, readonly=True, default='New')
     date_of_birth = fields.Date(string='Date of Birth')
     name = fields.Char(string="Name", required=True)
+
     state_id = fields.Many2one(
         'res.country.state',
         string="State",

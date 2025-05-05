@@ -35,7 +35,7 @@ class MedicalBill(models.Model):
             'tag': 'display_notification',
             'params': {
                 'title': 'Saved',
-                'message': 'Bill record saved successfully!',
+                'message': 'Bill  record saved successfully!',
                 'type': 'success',
                 'sticky': False,
             }

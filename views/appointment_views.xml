@@ -37,7 +37,7 @@
                             <button name="action_done" string="Mark Done" type="object" class="btn btn-success"/>
                             <button name="action_cancel" string="Cancel" type="object" class="btn btn-danger"/>
 
-                        </div>
+                            </div>
 
                         <!-- Form Fields -->
                         <group>
@@ -71,7 +71,7 @@
 
         <!-- Menu -->
         <menuitem id="menu_appointment" name="Appointments"
-                  parent="reception" action="action_appointment"/>
+                  parent="reception" action="action_appointment" sequence="2"/>
 
     </data>
 </odoo>

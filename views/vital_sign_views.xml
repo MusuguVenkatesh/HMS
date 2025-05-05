@@ -46,5 +46,5 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="menu_vital_sign" name="Vital Signs" parent="reception" action="action_vital_sign"/>
+    <menuitem id="menu_vital_sign" name="Vital Signs" parent="reception" action="action_vital_sign" sequence="3"/>
 </odoo>

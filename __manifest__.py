@@ -19,7 +19,12 @@ Full-featured Hospital Management System including:
     'data': [
        # 'security/security.xml',
         'security/ir.model.access.csv',
-
+        'views/login_menu.xml',
+        'views/reception_login.xml',
+        'views/doctor_login_views.xml',
+        'views/icu_bed_login_view.xml',
+        'views/medical_billing_login_view.xml',
+        'views/reception_dashboard_views.xml',
         'views/patient_view.xml',
         'views/menu_views.xml',
         'views/appointment_views.xml',
@@ -28,12 +33,15 @@ Full-featured Hospital Management System including:
         'views/vital_sign_views.xml',
 
         'views/hospital_medication_plan_line_views.xml',
-        'views/labtest_views.xml',
-        'views/bloodtest_views.xml',
-        'views/urinetest_views.xml',
-        'views/cardiactest_views.xml',
-        'views/rapiddiagnostic_views.xml',
-        'views/imagingtest_views.xml',
+     #   'views/labtest_views.xml',
+        # 'views/bloodtest_views.xml',
+        # 'views/urinetest_views.xml',
+        # 'views/cardiactest_views.xml',
+        # 'views/rapiddiagnostic_views.xml',
+        # 'views/imagingtest_views.xml',
+       # 'views/billing_log_views.xml',
+
+
 
     #     'views/medicalbillreport_views.xml',
     #     'views/medicalbill_views.xml',

@@ -6,9 +6,12 @@ class HospitalMedicationPlan(models.Model):
     _description = 'Medication Plan'
 
     patient_id = fields.Many2one('hospital.patient', string="Patient", required=True)
+
     medicine_name = fields.Char('Medication Name')
     medication_count = fields.Integer('Medication Count')
-    doctor_id = fields.Many2one('hospital.doctor', string="Doctor")  # Add if needed
+    doctor_id = fields.Many2one('hospital.patient', string="Doctor")  # Add if needed
+    bed_id = fields.Many2one('hospital.icu.bed', string="ICU Bed")
+    bed_patient_name = fields.Char(string="Patient in Bed", related='bed_id.patient_id.name', store=True)
 
     start_date = fields.Date(string="Start Date")
     end_date = fields.Date(string="End Date")

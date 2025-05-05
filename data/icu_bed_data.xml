@@ -1,43 +1,43 @@
 
 
- <odoo noupdate="1">
-    <record id="icu_bed_1" model="hospital.icu.bed">
+<odoo noupdate="1">
+    <record id="icu_bed_1" model="hospital.icu.booking">
         <field name="name">ICU Bed A1</field>
         <field name="code">A1</field>
     </record>
-    <record id="icu_bed_2" model="hospital.icu.bed">
+    <record id="icu_bed_2" model="hospital.icu.booking">
         <field name="name">ICU Bed A2</field>
         <field name="code">A2</field>
     </record>
-    <record id="icu_bed_3" model="hospital.icu.bed">
+    <record id="icu_bed_3" model="hospital.icu.booking">
         <field name="name">ICU Bed A3</field>
         <field name="code">A3</field>
     </record>
-    <record id="icu_bed_4" model="hospital.icu.bed">
+    <record id="icu_bed_4" model="hospital.icu.booking">
         <field name="name">ICU Bed A4</field>
         <field name="code">A4</field>
     </record>
-    <record id="icu_bed_5" model="hospital.icu.bed">
+    <record id="icu_bed_5" model="hospital.icu.booking">
         <field name="name">ICU Bed A5</field>
         <field name="code">A5</field>
     </record>
-    <record id="icu_bed_6" model="hospital.icu.bed">
+    <record id="icu_bed_6" model="hospital.icu.booking">
         <field name="name">ICU Bed A6</field>
         <field name="code">A6</field>
     </record>
-    <record id="icu_bed_7" model="hospital.icu.bed">
+    <record id="icu_bed_7" model="hospital.icu.booking">
         <field name="name">ICU Bed A7</field>
         <field name="code">A7</field>
     </record>
-    <record id="icu_bed_8" model="hospital.icu.bed">
+    <record id="icu_bed_8" model="hospital.icu.booking">
         <field name="name">ICU Bed A8</field>
         <field name="code">A8</field>
     </record>
-    <record id="icu_bed_9" model="hospital.icu.bed">
+    <record id="icu_bed_9" model="hospital.icu.booking">
         <field name="name">ICU Bed A9</field>
         <field name="code">A9</field>
     </record>
-    <record id="icu_bed_10" model="hospital.icu.bed">
+    <record id="icu_bed_10" model="hospital.icu.booking">
         <field name="name">ICU Bed A10</field>
         <field name="code">A10</field>
     </record>

@@ -52,8 +52,8 @@
         </record>
 
         <!-- Menu Item -->
-        <menuitem id="labtest_menu" action="action_labtest"
-                  parent="hospital_management_menu" name="Lab Tests"/>
+        <!--menuitem id="labtest_menu" action="action_labtest"
+                  parent="hospital_management_menu" name="Lab Tests"/-->
 
 <!--        <menuitem id="labtest_rapid_menu" name="Rapid Diagnostic"   parent="labtest_menu" />-->
 <!--        <menuitem id="labtest_cardiac_menu" name="Cardiac Tests"  parent="labtest_menu" />-->

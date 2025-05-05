@@ -65,5 +65,5 @@
         </field>
     </record>
 
-
+ <menuitem id="registration_menu" name="Registration" parent="reception" action="HMS.action_patient" sequence="1"/>
 </odoo>
